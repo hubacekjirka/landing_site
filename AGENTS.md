@@ -14,8 +14,6 @@
   notes: >
     Use this agent for running and editing Terraform files safely.
 
----
-
 ## 🎨 Frontend Agent
 - name: ui
   mode: agent
@@ -30,3 +28,16 @@
     - echo "Ready to edit and preview static site."
   notes: >
     Use this agent for editing or refactoring frontend files only.
+
+## 🔧 Repo Workflow Agent
+- name: repo
+  mode: agent
+  description: Creates branches, commits approved changes, and opens PRs with auto-generated body.
+  permissions:
+    - read: all
+    - write: ["website/**","terraform/**","**/*.md"]
+    - execute: ["git","gh","bash","terraform"]
+  env:
+    - GH_HOST=github.com
+  notes: >
+    Uses scripts/make-pr-body.sh; ask before running commands.
