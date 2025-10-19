@@ -3,27 +3,157 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jirka Hubacek - The Dark Side</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Jirka Hubáček is a data engineer specialising in resilient data platforms, dependable automation, and team mentorship.">
+  <title>Jirka Hubáček – Data Engineer & Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <div class="stars"></div>
-  <div class="twinkling"></div>
-  
-  <div class="container">
-    <main class="content">
-      <section class="profile">
-        <div class="profile-card">
-          <div class="hologram">
-            <img src="darth_vader.png" alt="Darth Vader Mask" class="vader-image">
-          </div>
-          <p class="welcome-message">Welcome to the Dark Side</p>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header>
+    <div class="nav-container">
+      <button class="nav-logo" type="button" aria-label="Surprise portal" data-easter-egg>
+        <img src="assets/images/avatar.webp" width="48" height="48" alt="Portrait of Jirka Hubáček">
+      </button>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>Jirka Hubáček</h1>
+        <h2>Data engineer delivering resilient analytics platforms.</h2>
+        <p>Hands-on specialist with 17 years of experience stabilising data estates for fintech, insurance, and telecom organisations; presently building the central platform at N26.</p>
+        <a href="#contact" class="cta">Contact</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h3>About</h3>
+      <p>I am a data engineer and developer with 17 years of experience, currently responsible for the architecture, cost profile, and performance of N26’s data platform. My work here includes restructuring our single Redshift cluster into a fleet of smaller domains so each department has predictable capacity, adopting Data Shares and Redshift Serverless ahead of general availability, and tightening the operational playbook that keeps the platform compliant and efficient.</p>
+      <p>Before moving in-house, I spent much of the 2010s consulting for EY, Mercedes-Benz, Teradata, and Think Big—building integration teams, hardening SQL Server estates, and delivering analytics programmes for clients such as National Australia Bank, BMW, Audi, Lufthansa, Vodafone, and O2. That blend of enterprise and greenfield experience still shapes how I evaluate tools and design processes with long-term sustainability in mind.</p>
+      <p>My preferred stack spans Python, Redshift, Teradata, SQL Server, Tableau, Docker, and AWS, with supporting experience in Terraform, Kubernetes, GitHub DevOps workflows, Kinesis, S3, Azure, Hadoop, and C#. Outside of work I enjoy improvisation comedy, scuba diving, and photography, and I continue to explore AI-assisted tooling—this page was assembled with Warp and Codex.</p>
+    </section>
+
+    <section id="experience">
+      <h3>Experience</h3>
+      <div class="experience">
+        <div class="experience-card">
+          <h4>Senior Data Engineer</h4>
+          <h5>N26</h5>
+          <p>I joined N26 in 2021 at the end of its hyper-growth phase, as the company shifted toward efficiency, optimisation, and scalability. Soon after landing, I began redesigning the data platform components whose earliest design choices could no longer support the volumes and velocity we were seeing.</p>
+          <p>As a major contributor to the central platform, I led the effort to scale our AWS Redshift estate by splitting the single cluster into a fleet of smaller, domain-aligned units so departments received consistent performance. Along the way I helped pioneer Redshift Data Shares and Redshift Serverless in production—becoming one of the first AWS clients to do so—and later presented the implementation at Redshift Days in Munich.</p>
         </div>
-      </section>
-    </main>
-  </div>
+        <div class="experience-card">
+          <h4>Data Engineer / Developer</h4>
+          <h5>EY Data &amp; Analytics APAC</h5>
+          <p>As a manager-level consultant, I delivered cloud data platforms, DevOps automation, and software engineering solutions across healthcare, insurance, and banking clients. My work spanned Python, C#, and data engineering—often operating at the intersection of analytics, automation, and platform architecture. I led delivery teams on greenfield cloud data platforms, implemented secure medical imaging pipelines, and introduced modern engineering practices that established structure and predictability within large-scale digital transformations.</p>
+          <p>Beyond project delivery, I focused on capability building—mentoring distributed teams, shaping DevOps and Git-based workflows, and maintaining technical rigor under demanding timelines. Whether developing anonymisation systems for medical data, automating MRI planning tools, or standardising data pipelines for enterprise clients, my objective remained consistent: combine strong engineering fundamentals with pragmatic delivery leadership that enabled lasting client success.</p>
+        </div>
+        <div class="experience-card">
+          <h4>Platform Architect</h4>
+          <h5>Mercedes‑Benz AG</h5>
+          <p>I was re-engaged by a former client to design and deploy highly available SQL Server architectures leveraging Always On Availability Groups. The environment operated under strict security and compliance requirements, where system hardening and adherence to industry best practices were paramount. I ensured the platform met both organisational security standards and regulatory obligations while maintaining performance, resilience, and operational continuity.</p>
+        </div>
+        <div class="experience-card">
+          <h4>Data Engineer / Consultant</h4>
+          <h5>Teradata &amp; Think Big</h5>
+          <p>I joined Teradata in 2014 to deepen my expertise in relational databases, gaining hands-on experience with MPP systems, large-scale data warehousing, data modelling, ETL development, and data visualisation.</p>
+          <p>In 2018, I moved to Teradata’s open-source consulting arm, ThinkBig Analytics, in Australia, where I designed and implemented modern data lake architectures for enterprise clients. I led data solution development for a major bank’s marketing department and mentored team members in Teradata, SQL, and Tableau.</p>
+        </div>
+        <div class="experience-card">
+          <h4>Consultant</h4>
+          <h5>Clever Decision</h5>
+          <p>In my first consultancy role, I built end-to-end expertise across the SQL Server Data Platform within a firm dedicated to Microsoft technologies. I started with SSIS development, Master Data Services, and SQL programming, later expanding into DBA responsibilities managing over 50 SQL Server instances. I concluded my tenure by designing and implementing highly available SQL Server infrastructures using Always On Availability Groups (SQL Server 2012) and optimising deployments from hardware configuration through to operations. I also contributed to the SQL Server community, delivering a talk on best practices for setup and performance tuning across the full stack.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <h3>Skills &amp; Expertise</h3>
+      <div class="skills-grid">
+        <div>
+          <h6>Core Stack</h6>
+          <p>Python, SQL (Teradata, Redshift, SQL Server), Docker, AWS, Tableau.</p>
+        </div>
+        <div>
+          <h6>Platform Operations</h6>
+          <p>Terraform, Kubernetes, GitHub DevOps workflows, Kinesis, S3, Azure, Hadoop, C#.</p>
+        </div>
+        <div>
+          <h6>Certifications</h6>
+          <p>AWS Practitioner, MCITP for MS SQL Server, Teradata Physical Design, Teradata SQL, Teradata Basics.</p>
+        </div>
+        <div>
+          <h6>Languages</h6>
+          <p>English, German, Czech.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h3>Personal Projects</h3>
+      <ul>
+        <li><strong>Automated Photo Publishing App</strong> – A Python-driven project that posts my photos daily to my Bluesky account. It uses AWS Rekognition for image analysis, Google Maps API for reverse geolocation, and an automated hashtag generator. Deployed using AWS ECR, ECS, and S3.</li>
+        <li><strong>Telegram Companion Bot</strong> – Python bot that receives photo uploads via Telegram and pushes them directly to S3, feeding into the automated photo publishing pipeline.</li>
+      </ul>
+    </section>
+
+    <section class="education" id="education">
+      <h3>Education</h3>
+      <p class="degree">Bachelor of Computer Science</p>
+      <p class="institution">Unicorn University, Prague</p>
+      <p>Graduated with an A-graded thesis on predicting London bike-share demand using open data from Transport for London. The project explored how weather, geography, and commuter behaviour influence usage patterns, leveraging distributed analytics on the Teradata Aster platform.</p>
+      <p>Unicorn University is a technology-focused institution in Prague emphasising computer science, software engineering, and data-driven business innovation, with strong industry links to Central European tech companies.</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h3>Contact</h3>
+      <div class="contact-info">
+        <div class="contact-item">
+          <h6>LinkedIn</h6>
+          <p><a href="https://linkedin.com/in/jirkahubacek" target="_blank" rel="noopener">linkedin.com/in/jirkahubacek</a></p>
+        </div>
+        <div class="contact-item">
+          <h6>GitHub</h6>
+          <p><a href="https://github.com/hubacekjirka" target="_blank" rel="noopener">github.com/hubacekjirka</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Jirka Hubáček. All rights reserved.
+  </footer>
+  <script>
+    // Dynamically set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+const portalButton = document.querySelector('[data-easter-egg]');
+const body = document.body;
+const overlay = document.createElement('div');
+overlay.className = 'portal-overlay';
+
+portalButton?.addEventListener('click', () => {
+  if (body.contains(overlay)) return;
+  body.appendChild(overlay);
+  requestAnimationFrame(() => overlay.classList.add('is-active'));
+      setTimeout(() => {
+        window.location.href = 'dark_side.html';
+      }, 1800);
+    });
+  </script>
 </body>
 </html>
