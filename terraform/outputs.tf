@@ -1,6 +1,6 @@
 output "website_url" {
-  description = "The URL of the S3 static website"
-  value       = "http://${aws_s3_bucket.landing_page.bucket}.s3-website-${var.region}.amazonaws.com"
+  description = "Primary HTTPS endpoint for the landing page"
+  value       = "https://${aws_cloudfront_distribution.landing_page.domain_name}"
 }
 
 output "cloudfront_domain_name" {
