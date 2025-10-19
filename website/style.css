@@ -1,0 +1,150 @@
+/* Star Wars Theme CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', monospace;
+  background: #000;
+  color: #FFE81F;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Starfield Background */
+.stars, .twinkling {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.stars {
+  background: #000 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Cg fill='%23ffffff' fill-opacity='0.6'%3E%3Ccircle cx='10' cy='10' r='1'/%3E%3Ccircle cx='50' cy='30' r='1'/%3E%3Ccircle cx='90' cy='70' r='1'/%3E%3Ccircle cx='130' cy='20' r='1'/%3E%3Ccircle cx='170' cy='90' r='1'/%3E%3Ccircle cx='210' cy='40' r='1'/%3E%3Ccircle cx='250' cy='80' r='1'/%3E%3Ccircle cx='290' cy='15' r='1'/%3E%3C/g%3E%3C/svg%3E") repeat;
+  z-index: 1;
+}
+
+.twinkling {
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill='%23FFE81F' fill-opacity='0.3'%3E%3Ccircle cx='25' cy='25' r='2'/%3E%3Ccircle cx='125' cy='75' r='2'/%3E%3Ccircle cx='225' cy='125' r='2'/%3E%3Ccircle cx='325' cy='175' r='2'/%3E%3C/g%3E%3C/svg%3E") repeat;
+  animation: move-twink-back 200s linear infinite;
+  z-index: 2;
+}
+
+@keyframes move-twink-back {
+  from { background-position: 0 0; }
+  to { background-position: -10000px 5000px; }
+}
+
+.container {
+  position: relative;
+  z-index: 3;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Profile Section */
+.profile {
+  text-align: center;
+}
+
+.profile-card {
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  border: 2px solid #FFE81F;
+  border-radius: 15px;
+  padding: 60px 40px;
+  box-shadow: 0 0 50px rgba(255, 232, 31, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.hologram {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.hologram::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(139, 0, 0, 0.4) 0%, rgba(100, 0, 0, 0.2) 40%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
+  animation: red-pulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes red-pulse {
+  0% { 
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.6;
+  }
+  100% { 
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.3;
+  }
+}
+
+.vader-image {
+  width: 250px;
+  height: auto;
+  filter: 
+    drop-shadow(0 0 20px rgba(255, 232, 31, 0.6))
+    drop-shadow(0 0 40px rgba(255, 232, 31, 0.4))
+    drop-shadow(0 0 60px rgba(139, 0, 0, 0.4));
+  animation: hologram-flicker 3s ease-in-out infinite;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes hologram-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.welcome-message {
+  font-size: 2.2rem;
+  color: #FF6B6B;
+  font-weight: bold;
+  text-shadow: 0 0 20px #FF6B6B;
+  letter-spacing: 2px;
+  animation: dark-side-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes dark-side-glow {
+  from { 
+    text-shadow: 0 0 20px #FF6B6B, 0 0 30px #FF6B6B, 0 0 40px #FF6B6B;
+  }
+  to { 
+    text-shadow: 0 0 10px #FF6B6B, 0 0 20px #FF6B6B, 0 0 30px #FF6B6B, 0 0 40px #FF6B6B, 0 0 50px #FF6B6B;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-message {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+  }
+  
+  .vader-image {
+    width: 180px;
+  }
+  
+  .profile-card {
+    padding: 40px 30px;
+  }
+}
