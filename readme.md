@@ -33,6 +33,35 @@ Every line of code in this project was misguided by:
 
 And our focus was on creating a landing page worthy of the Jedi Archives.
 
+## 🧱 Infrastructure & HTTPS
+
+- Terraform provisions the S3 static website, CloudFront distribution, and an ACM certificate for `hubacek.xyz` and `www.hubacek.xyz`.
+- After running `terraform apply`, grab the `acm_dns_validation_records` output and create matching CNAME entries in GoDaddy so the certificate can be issued.
+- Once the certificate is validated, point your public DNS at the `cloudfront_domain_name` output:
+  - Create a CNAME for `www` → CloudFront domain.
+  - For the apex (`hubacek.xyz`), use an ALIAS/ANAME record if your registrar supports it, or forward the root to `www`.
+- CloudFront redirects HTTP → HTTPS automatically and serves the static assets from the S3 bucket.
+## 🤖 Working with Codex Agents
+
+When proposing changes, Codex agents follow the Jedi way:
+
+1. **Create a feature branch** - Never commit directly to `main`
+2. **Use imperative commit messages** - e.g., "Add responsive navigation" or "Fix hero section alignment"
+3. **Describe your changes** - Explain what you did and why in the commit body
+4. **Include a Star Wars quote** - End each commit message with wisdom from the saga
+
+### Example Commit Format
+
+```
+Add dark mode toggle to navigation
+
+- Implement theme switcher in header
+- Store user preference in localStorage
+- Apply consistent styling across all pages
+
+"Do. Or do not. There is no try." - Yoda
+```
+
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
