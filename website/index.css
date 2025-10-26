@@ -84,6 +84,7 @@ header {
   justify-content: center;
   width: 48px;
   height: 48px;
+  flex: 0 0 auto;
   border-radius: 50%;
   border: 2px solid rgba(1, 159, 181, 0.18);
   background: rgba(255, 255, 255, 0.96);
