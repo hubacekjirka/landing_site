@@ -130,9 +130,29 @@
           <h6>GitHub</h6>
           <p><a href="https://github.com/hubacekjirka" target="_blank" rel="noopener">github.com/hubacekjirka</a></p>
         </div>
+        <div class="contact-item">
+          <h6>Bluesky</h6>
+          <p><a href="https://bsky.app/profile/hubacekjirka.bsky.social" target="_blank" rel="noopener">@hubacekjirka.bsky.social</a></p>
+        </div>
       </div>
     </section>
   </main>
+
+  <div class="portal-overlay" id="dark-side" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="dark-side-title" hidden>
+    <div class="portal-stars" aria-hidden="true"></div>
+    <div class="portal-twinkling" aria-hidden="true"></div>
+    <div class="portal-container">
+      <section class="portal-profile">
+        <div class="portal-card">
+          <div class="portal-hologram">
+            <img src="darth_vader.png" alt="Darth Vader mask" class="portal-vader-image">
+          </div>
+          <p class="portal-welcome-message" id="dark-side-title">Welcome to the Dark Side</p>
+          <button type="button" class="portal-return" data-close-portal>Return to the Light</button>
+        </div>
+      </section>
+    </div>
+  </div>
 
   <footer>
     © <span id="year"></span> Jirka Hubáček. All rights reserved.
@@ -141,18 +161,56 @@
     // Dynamically set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-const portalButton = document.querySelector('[data-easter-egg]');
-const body = document.body;
-const overlay = document.createElement('div');
-overlay.className = 'portal-overlay';
+    const portalButton = document.querySelector('[data-easter-egg]');
+    const overlay = document.getElementById('dark-side');
+    const closePortalButton = overlay?.querySelector('[data-close-portal]');
+    let previousFocus = null;
 
-portalButton?.addEventListener('click', () => {
-  if (body.contains(overlay)) return;
-  body.appendChild(overlay);
-  requestAnimationFrame(() => overlay.classList.add('is-active'));
-      setTimeout(() => {
-        window.location.href = 'dark_side.html';
-      }, 1800);
+    const finishClosing = () => {
+      if (!overlay) return;
+      overlay.setAttribute('hidden', '');
+    };
+
+    const closePortal = () => {
+      if (!overlay) return;
+      overlay.classList.remove('is-active');
+      overlay.setAttribute('aria-hidden', 'true');
+      overlay.addEventListener('transitionend', finishClosing, { once: true });
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        finishClosing();
+      }
+      document.body.classList.remove('is-portal-open');
+      if (previousFocus && typeof previousFocus.focus === 'function') {
+        previousFocus.focus();
+      }
+      previousFocus = null;
+    };
+
+    const openPortal = () => {
+      if (!overlay) return;
+      previousFocus = document.activeElement;
+      overlay.removeEventListener('transitionend', finishClosing);
+      overlay.removeAttribute('hidden');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('is-portal-open');
+      requestAnimationFrame(() => {
+        overlay.classList.add('is-active');
+        closePortalButton?.focus();
+      });
+    };
+
+    portalButton?.addEventListener('click', openPortal);
+    closePortalButton?.addEventListener('click', closePortal);
+    overlay?.addEventListener('click', (event) => {
+      if (event.target === overlay) {
+        closePortal();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && overlay?.classList.contains('is-active')) {
+        closePortal();
+      }
     });
   </script>
 </body>
