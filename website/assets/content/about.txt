@@ -1,0 +1,5 @@
+I am a data engineer and developer with 17 years of experience, currently responsible for the N26’s data platform. My work here includes architecting and developping the company’s data platform, serving over one thousand internal clients every day.
+
+Before moving in-house, I spent much of the 2010s consulting for EY, Mercedes-Benz, Teradata, and Think Big—building integration teams, hardening SQL Server estates, and delivering analytics programmes for clients such as National Australia Bank, BMW, Audi, Lufthansa, Vodafone, and O2. That blend of enterprise and greenfield experience still shapes how I evaluate tools and design processes with long-term sustainability in mind.
+
+My preferred stack spans Python, Redshift, Teradata, SQL Server, Tableau, Docker, and AWS, with supporting experience in Terraform, Kubernetes, GitHub DevOps workflows, Kinesis, S3, Hadoop, and C#. Outside of work I enjoy improvisation comedy, scuba diving, and photography, and I continue to explore AI-assisted tooling—this page was assembled with Warp and Codex.

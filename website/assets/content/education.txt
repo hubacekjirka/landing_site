@@ -1,0 +1,3 @@
+Graduated with an A-graded thesis on predicting London bike-share demand using open data from Transport for London. The project explored how weather, geography, and commuter behaviour influence usage patterns, leveraging distributed analytics on the Teradata Aster platform.
+
+Unicorn University is a technology-focused institution in Prague emphasising computer science, software engineering, and data-driven business innovation, with strong industry links to Central European tech companies.

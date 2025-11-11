@@ -1,0 +1,3 @@
+I joined Teradata in 2014 to deepen my expertise in relational databases, gaining hands-on experience with MPP systems, large-scale data warehousing, data modelling, ETL development, and data visualisation.
+
+In 2018, I moved to Teradata’s open-source consulting arm, ThinkBig Analytics, in Australia, where I designed and implemented modern data lake architectures for enterprise clients. I led data solution development for a major bank’s marketing department and mentored team members in Teradata, SQL, and Tableau.
