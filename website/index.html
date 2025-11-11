@@ -35,16 +35,14 @@
       <div class="hero-content">
         <h1>Jirka Hubáček</h1>
         <h2>Data Engineer</h2>
-        <p>Hands-on specialist with 17 years of experience stabilising data estates for fintech, insurance, and telecom organisations; presently building data platform at N26.</p>
+        <p data-text-source="assets/content/hero-intro.txt"></p>
         <a href="#contact" class="cta">Contact</a>
       </div>
     </section>
 
     <section class="about" id="about">
       <h3>About</h3>
-      <p>I am a data engineer and developer with 17 years of experience, currently responsible for the N26’s data platform. My work here includes architecting and developping the company’s data platform, serving over one thousand internal clients every day.</p>
-      <p>Before moving in-house, I spent much of the 2010s consulting for EY, Mercedes-Benz, Teradata, and Think Big—building integration teams, hardening SQL Server estates, and delivering analytics programmes for clients such as National Australia Bank, BMW, Audi, Lufthansa, Vodafone, and O2. That blend of enterprise and greenfield experience still shapes how I evaluate tools and design processes with long-term sustainability in mind.</p>
-      <p>My preferred stack spans Python, Redshift, Teradata, SQL Server, Tableau, Docker, and AWS, with supporting experience in Terraform, Kubernetes, GitHub DevOps workflows, Kinesis, S3, Hadoop, and C#. Outside of work I enjoy improvisation comedy, scuba diving, and photography, and I continue to explore AI-assisted tooling—this page was assembled with Warp and Codex.</p>
+      <div data-text-source="assets/content/about.txt" data-text-mode="paragraphs"></div>
     </section>
 
     <section class="skills" id="skills">
@@ -52,7 +50,7 @@
       <div class="skills-grid">
         <div>
           <h6>Technical Expertise</h6>
-          <p>Python, SQL, Redshift, Teradata, SQL Server, Docker, Tableau, Iceberg, S3, Athena, Glue, Kinesis, Spark, Terraform, Kubernetes, DevOps workflows.</p>
+          <p>Python, SQL, Redshift, Teradata, SQL Server, Docker, Tableau, Iceberg, S3, Athena, Glue, Kinesis, Terraform, Kubernetes, DevOps workflows.</p>
         </div>
         <div>
           <h6>Certifications</h6>
@@ -71,30 +69,27 @@
         <div class="experience-card">
           <h4>Senior Data Engineer</h4>
           <h5>N26</h5>
-          <p>I joined N26 in 2021 at the end of its hyper-growth phase, as the company shifted toward efficiency, optimisation, and scalability. Soon after landing, I began redesigning the data platform components whose earliest design choices could no longer support the volumes and velocity we were seeing.</p>
-          <p>As a major contributor to the central platform, I led the effort to scale our AWS Redshift estate by splitting the single cluster into a fleet of smaller, domain-aligned units so departments received consistent performance. Along the way I helped pioneer Redshift Data Shares and Redshift Serverless in production—becoming one of the first AWS clients to do so—and later presented the implementation at Redshift Days in Munich.</p>
+          <div data-text-source="assets/content/experience-n26.txt" data-text-mode="paragraphs"></div>
         </div>
         <div class="experience-card">
           <h4>Data Engineer / Manager</h4>
           <h5>EY Data &amp; Analytics APAC</h5>
-          <p>As a manager-level consultant, I delivered cloud data platforms, DevOps automation, and software engineering solutions across healthcare, insurance, and banking clients. My work spanned Python, C#, and data engineering—often operating at the intersection of analytics, automation, and platform architecture. I led delivery teams on greenfield cloud data platforms, implemented secure medical imaging pipelines, and introduced modern engineering practices that established structure and predictability within large-scale digital transformations.</p>
-          <p>Beyond project delivery, I focused on capability building—mentoring distributed teams, shaping DevOps and Git-based workflows, and maintaining technical rigor under demanding timelines. Whether developing anonymisation systems for medical data, automating MRI planning tools, or standardising data pipelines for enterprise clients, my objective remained consistent: combine strong engineering fundamentals with pragmatic delivery leadership that enabled lasting client success.</p>
+          <div data-text-source="assets/content/experience-ey.txt" data-text-mode="paragraphs"></div>
         </div>
         <div class="experience-card">
           <h4>Platform Architect</h4>
           <h5>Mercedes‑Benz AG</h5>
-          <p>I was re-engaged by a former client to design and deploy highly available SQL Server architectures leveraging Always On Availability Groups. The environment operated under strict security and compliance requirements, where system hardening and adherence to industry best practices were paramount. I ensured the platform met both organisational security standards and regulatory obligations while maintaining performance, resilience, and operational continuity.</p>
+          <div data-text-source="assets/content/experience-mercedes.txt" data-text-mode="paragraphs"></div>
         </div>
         <div class="experience-card">
           <h4>Data Engineer / Consultant</h4>
           <h5>Teradata &amp; Think Big</h5>
-          <p>I joined Teradata in 2014 to deepen my expertise in relational databases, gaining hands-on experience with MPP systems, large-scale data warehousing, data modelling, ETL development, and data visualisation.</p>
-          <p>In 2018, I moved to Teradata’s open-source consulting arm, ThinkBig Analytics, in Australia, where I designed and implemented modern data lake architectures for enterprise clients. I led data solution development for a major bank’s marketing department and mentored team members in Teradata, SQL, and Tableau.</p>
+          <div data-text-source="assets/content/experience-teradata.txt" data-text-mode="paragraphs"></div>
         </div>
         <div class="experience-card">
           <h4>Consultant</h4>
           <h5>Clever Decision</h5>
-          <p>In my first consultancy role, I built end-to-end expertise across the SQL Server Data Platform within a firm dedicated to Microsoft technologies. I started with SSIS development, Master Data Services, and SQL programming, later expanding into DBA responsibilities managing over 50 SQL Server instances. I concluded my tenure by designing and implementing highly available SQL Server infrastructures using Always On Availability Groups (SQL Server 2012) and optimising deployments from hardware configuration through to operations. I also contributed to the SQL Server community, delivering a talk on best practices for setup and performance tuning across the full stack.</p>
+          <div data-text-source="assets/content/experience-clever-decision.txt" data-text-mode="paragraphs"></div>
         </div>
       </div>
     </section>
@@ -111,8 +106,7 @@
       <h3>Education</h3>
       <p class="degree">Bachelor of Computer Science</p>
       <p class="institution">Unicorn University, Prague</p>
-      <p>Graduated with an A-graded thesis on predicting London bike-share demand using open data from Transport for London. The project explored how weather, geography, and commuter behaviour influence usage patterns, leveraging distributed analytics on the Teradata Aster platform.</p>
-      <p>Unicorn University is a technology-focused institution in Prague emphasising computer science, software engineering, and data-driven business innovation, with strong industry links to Central European tech companies.</p>
+      <div data-text-source="assets/content/education.txt" data-text-mode="paragraphs"></div>
     </section>
 
     <section class="contact" id="contact">
@@ -207,6 +201,49 @@
       if (event.key === 'Escape' && overlay?.classList.contains('is-active')) {
         closePortal();
       }
+    });
+
+    const paragraphSeparator = /\r?\n\s*\r?\n/;
+
+    const hydrateTextSource = async (element) => {
+      const source = element.getAttribute('data-text-source');
+      const mode = element.getAttribute('data-text-mode') || 'inline';
+      if (!source) {
+        return;
+      }
+
+      try {
+        const response = await fetch(source);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch ${source}`);
+        }
+        const rawText = (await response.text()).trim();
+        if (!rawText) {
+          return;
+        }
+
+        if (mode === 'paragraphs') {
+          const paragraphs = rawText.split(paragraphSeparator)
+            .map((line) => line.trim())
+            .filter(Boolean);
+          element.innerHTML = '';
+          paragraphs.forEach((paragraph) => {
+            const p = document.createElement('p');
+            p.textContent = paragraph;
+            element.appendChild(p);
+          });
+        } else {
+          element.textContent = rawText;
+        }
+      } catch (error) {
+        console.error(error);
+        element.setAttribute('data-text-error', 'true');
+      }
+    };
+
+    const textSourceTargets = document.querySelectorAll('[data-text-source]');
+    textSourceTargets.forEach((element) => {
+      hydrateTextSource(element);
     });
   </script>
 </body>
