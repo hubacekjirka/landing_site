@@ -600,6 +600,12 @@ footer {
   font-size: 0.85rem;
 }
 
+footer .disclaimer {
+  margin: 0.4rem 0 0;
+  font-size: 0.75rem;
+  color: #8a95a6;
+}
+
 .portal-overlay {
   position: fixed;
   inset: 0;
