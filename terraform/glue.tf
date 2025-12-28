@@ -2,8 +2,8 @@ resource "aws_glue_catalog_database" "landing_page_logs" {
   name = "landing_page_logs"
 }
 
-resource "aws_glue_catalog_table" "cloudfront_logs" {
-  name          = "cloudfront_logs"
+resource "aws_glue_catalog_table" "cloudfront_logs_raw" {
+  name          = "cloudfront_logs_raw"
   database_name = aws_glue_catalog_database.landing_page_logs.name
   table_type    = "EXTERNAL_TABLE"
 

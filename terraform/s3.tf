@@ -91,3 +91,20 @@ resource "aws_s3_bucket_acl" "landing_page_logs" {
     aws_s3_bucket_ownership_controls.landing_page_logs
   ]
 }
+
+resource "aws_s3_bucket_lifecycle_configuration" "landing_page_logs" {
+  bucket = aws_s3_bucket.landing_page_logs.id
+
+  rule {
+    id     = "expire-cloudfront-logs-180d"
+    status = "Enabled"
+
+    filter {
+      prefix = "cloudfront/"
+    }
+
+    expiration {
+      days = 180
+    }
+  }
+}
