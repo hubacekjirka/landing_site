@@ -1,1 +1,5 @@
-Joined in 2026 and still figuring it out 🎉🎉🎉
+Working on automation and developer tooling for a multi-petabyte data platform, with a focus on scalability, reliability, and reducing operational overhead.
+
+Platform automation: Improved pull-request validation and approval for creating and modifying data pipelines, increasing the proportion of changes completed without the platform team's involvement from 60% to 92%. Expanded validation feedback so engineers could identify and resolve issues independently.
+
+Performance & reliability: Improved Kubernetes cluster observability and optimized pod and cluster configurations, reducing the average delay between event creation and data availability for platform users from 24 hours to 8 hours.

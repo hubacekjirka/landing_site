@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jirka Hubáček is a data engineer specialising in resilient data platforms, dependable automation, and team mentorship.">
-  <title>Jirka Hubáček – Data Engineer & Developer</title>
+  <meta name="description" content="Jirka Hubáček is a senior data engineer focused on data platforms, performance, reliability, and automation. Currently at Revolut.">
+  <title>Jirka Hubáček | Senior Data Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#projects">Projects &amp; Talks</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -34,31 +34,33 @@
     <section class="hero" id="hero">
       <div class="hero-content">
         <h1>Jirka Hubáček</h1>
-        <h2>Data Engineer</h2>
+        <h2>Senior Data Engineer</h2>
+        <p><strong>Data Platforms · Performance · Reliability</strong></p>
         <p data-text-source="assets/content/hero-intro.txt"></p>
         <a href="#contact" class="cta">Contact</a>
       </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to the About section"></a>
     </section>
 
     <section class="about" id="about">
       <h3>About</h3>
-      <div data-text-source="assets/content/about.txt" data-text-mode="paragraphs"></div>
+      <div data-text-source="assets/content/about.txt" data-text-mode="line-paragraphs"></div>
     </section>
 
     <section class="skills" id="skills">
       <h3>Skills &amp; Expertise</h3>
       <div class="skills-grid">
         <div>
-          <h6>Technical Expertise</h6>
-          <p>Python, SQL, Redshift, Teradata, SQL Server, Docker, Tableau, Iceberg, S3, Athena, Glue, Kinesis, Terraform, Kubernetes, DevOps workflows.</p>
+          <h6>Platform Engineering</h6>
+          <p>Python, SQL, Redshift, PostgreSQL, Airflow, Iceberg, dbt, data modeling, query optimization, workload management</p>
         </div>
         <div>
-          <h6>Certifications</h6>
-          <p>AWS Practitioner, MCITP for SQL Server, Teradata Physical Design, Teradata SQL, Teradata Basics.</p>
+          <h6>Infrastructure & Automation</h6>
+          <p>AWS, Kubernetes, Terraform, Docker, CI/CD, orchestration, observability, platform automation</p>
         </div>
         <div>
-          <h6>Languages</h6>
-          <p>English, German, Czech.</p>
+          <h6>Technical Leadership</h6>
+          <p>System design, architectural trade-offs, mentoring, engineering standards, stakeholder collaboration</p>
         </div>
       </div>
     </section>
@@ -100,10 +102,23 @@
     </section>
 
     <section class="projects" id="projects">
-      <h3>Personal Projects</h3>
+      <h3>Projects &amp; Talks</h3>
       <ul>
-        <li><strong>Automated Photo Publishing App</strong> – A photo sharing application posting daily to my Bluesky account. It's a Python app that uses AWS Rekognition for image analysis, Google Maps API for reverse geolocation, and an automated hashtag generator. Deployed using AWS ECR, ECS, and S3.</li>
-        <li><strong>Telegram Companion Bot</strong> – Python bot that receives photo uploads via Telegram and pushes them directly to S3, feeding into the automated photo publishing pipeline.</li>
+        <li>
+          <p class="project-meta">Public speaking &middot; <a href="https://lnkd.in/dv6NJudJ" target="_blank" rel="noopener" title="Event announcement">AWS User Group Berlin</a></p>
+          <h4><a href="https://github.com/hubacekjirka/ug-berlin-redshift-data-sharing" target="_blank" rel="noopener" title="Presentation on GitHub">Redshift Data Sharing: Solving Workload Contention at Scale</a></h4>
+          <p>Explored how Redshift Data Sharing can address workload contention in large-scale analytical platforms. Covered architectural trade-offs between shared and isolated compute, predictable query performance, resilience, cost allocation, and practical lessons from operating distributed Redshift deployments.</p>
+        </li>
+        <li>
+          <p class="project-meta">Public speaking &middot; <a href="https://aws-experience.com/emea/de-central-growth/e/2973c/aws-analytics-day-redshift-focus" target="_blank" rel="noopener" title="Event description">AWS Analytics Day (Redshift focus)</a> &middot; Munich</p>
+          <h4>Redshift Serverless in Production</h4>
+          <p>Shared practical experience adopting Amazon Redshift Serverless in production, including evolving a monolithic Redshift deployment into independently scalable departmental workloads. Discussed performance isolation, workload characteristics, and the operational and financial trade-offs of different deployment models.</p>
+        </li>
+        <li>
+          <p class="project-meta">Personal project &middot; <a href="https://bsky.app/profile/hubacekjirka.bsky.social" target="_blank" rel="noopener" title="Bluesky profile">Bsky</a></p>
+          <h4>Automated Photo Publishing Pipeline</h4>
+          <p>Built a Python pipeline that publishes a photo to my Bluesky account each day. Uses AWS Rekognition for image analysis, the Google Maps API for reverse geocoding, and automated hashtag generation. Deployed on AWS using ECS, ECR, and S3.</p>
+        </li>
       </ul>
     </section>
 
@@ -228,8 +243,9 @@
           return;
         }
 
-        if (mode === 'paragraphs') {
-          const paragraphs = rawText.split(paragraphSeparator)
+        if (mode === 'paragraphs' || mode === 'line-paragraphs') {
+          const separator = mode === 'line-paragraphs' ? /\r?\n/ : paragraphSeparator;
+          const paragraphs = rawText.split(separator)
             .map((line) => line.trim())
             .filter(Boolean);
           element.innerHTML = '';

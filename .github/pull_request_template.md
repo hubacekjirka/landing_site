@@ -8,7 +8,7 @@
 <!-- Before/After or local preview steps -->
 
 ## Infra (Terraform)
-<!-- If relevant, Paste key lines from `terraform plan` or explain none -->
+<!-- If relevant, paste key lines from `terraform plan` or explain none -->
 
 ## Risk & Rollback
 <!-- Risk level, how to revert -->

@@ -24,7 +24,7 @@ This project was crafted using the combined might of:
 
 ## 🎭 The Story Behind
 
-Every line of code in this project was misguided by:
+Every line of code in this project was guided by:
 - The wisdom of **Warp's** intuitive terminal experience
 - The intelligence of **Codex** AI assistance
 - The timeless principles of clean, maintainable code

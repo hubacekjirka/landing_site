@@ -1,3 +1,9 @@
-I joined N26 in 2021 at the end of its hyper-growth phase, as the company shifted toward efficiency, optimisation, and scalability. Soon after landing, I began redesigning the data platform components whose earliest design choices could no longer support the volumes and velocity we were seeing.
+Helped evolve the data platform and its supporting tooling as the platform grew 10x in data volume, improving scalability, performance, and reliability while making it easier to use and operate for around 1000 internal users.
 
-As a major contributor to the central platform, I led the effort to scale our AWS Redshift estate by splitting the single cluster into a fleet of smaller, domain-aligned clusters, ensuring consistent performance across departments. Along the way, I helped pioneer Redshift Data Shares and Redshift Serverless in production—becoming one of the first AWS clients to do so—and later presented the implementation at Redshift Days in Munich.
+Data platform architecture: Led an initiative to remove resource contention between data ingestion and analytical queries by separating Redshift workloads across departmental deployments. This enabled workload-specific performance tuning and gave departments clearer visibility into their infrastructure costs.
+
+Platform tooling & self-service: Contributed to an internal Python ETL framework supporting custom extraction and ingestion, scheduling, dependencies, retries, and monitoring. Helped automate YAML-based configuration and introduced self-service capabilities for dataset onboarding and schema evolution, reducing manual work for platform engineers.
+
+Observability & performance: Built Redshift observability dashboards in Datadog to track the platform's resource utilization, performance trends, and deviations from established baselines. Helped analysts interpret query execution plans, optimize SQL and dbt models, and adopt incremental loading where appropriate.
+
+Collaboration & mentorship: Helped bring engineering closer to the business through direct collaboration and platform-user surveys and workshops. Shared knowledge and provided guidance across the team and mentored a junior engineer who progressed to a mid-level role.

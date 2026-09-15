@@ -1,1 +1,5 @@
-In my first consultancy role, I built end-to-end expertise across the SQL Server Data Platform within a firm dedicated to Microsoft technologies. I started with SSIS development, Master Data Services, and SQL programming, later expanding into DBA responsibilities, managing over 50 SQL Server instances. I concluded my tenure by designing and implementing highly available SQL Server infrastructures using Always On Availability Groups (SQL Server 2012) and optimising deployments from hardware configuration through to operations. I also contributed to the SQL Server community, delivering a talk on best practices for setup and performance tuning across the full stack.
+Developed solutions across the Microsoft data platform using SSIS, Master Data Services, and SQL. Expanded into database administration, managing more than 50 SQL Server instances.
+
+Designed and implemented highly available SQL Server deployments using Always On Availability Groups, and optimized performance across hardware configuration, database setup, and operations.
+
+Delivered a SQL Server community talk on setup and performance tuning.
