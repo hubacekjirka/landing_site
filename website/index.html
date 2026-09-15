@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jirka Hubáček is a data engineer specialising in resilient data platforms, dependable automation, and team mentorship.">
-  <title>Jirka Hubáček – Data Engineer & Developer</title>
+  <meta name="description" content="Jirka Hubáček is a senior data engineer focused on data platforms, performance, reliability, and automation. Currently at Revolut.">
+  <title>Jirka Hubáček | Senior Data Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
@@ -22,7 +22,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#projects">Projects &amp; Speaking</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -34,10 +34,11 @@
     <section class="hero" id="hero">
       <div class="hero-content">
         <h1>Jirka Hubáček</h1>
-        <h2>Data Engineer</h2>
+        <h2>Senior Data Engineer | Data Platforms &amp; Reliability</h2>
         <p data-text-source="assets/content/hero-intro.txt"></p>
         <a href="#contact" class="cta">Contact</a>
       </div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to the About section"></a>
     </section>
 
     <section class="about" id="about">
@@ -49,16 +50,16 @@
       <h3>Skills &amp; Expertise</h3>
       <div class="skills-grid">
         <div>
-          <h6>Technical Expertise</h6>
-          <p>Python, SQL, Redshift, Teradata, SQL Server, Docker, Tableau, Iceberg, S3, Athena, Glue, Kinesis, Terraform, Kubernetes, DevOps workflows.</p>
+          <h6>Platform Engineering</h6>
+          <p>Kubernetes, Airflow, AWS, Terraform, reliability & observability, performance & scaling, multi-region systems</p>
         </div>
         <div>
-          <h6>Certifications</h6>
-          <p>AWS Practitioner, MCITP for SQL Server, Teradata Physical Design, Teradata SQL, Teradata Basics.</p>
+          <h6>Data Engineering</h6>
+          <p>Python, SQL, Redshift, Iceberg, S3, Kinesis, Glue, Athena, data architecture, pipeline automation</p>
         </div>
         <div>
-          <h6>Languages</h6>
-          <p>English, German, Czech.</p>
+          <h6>Engineering Leadership</h6>
+          <p>Technical leadership, mentoring, engineering standards, developer experience</p>
         </div>
       </div>
     </section>
@@ -100,10 +101,28 @@
     </section>
 
     <section class="projects" id="projects">
-      <h3>Personal Projects</h3>
+      <h3>Projects &amp; Speaking</h3>
       <ul>
-        <li><strong>Automated Photo Publishing App</strong> – A photo sharing application posting daily to my Bluesky account. It's a Python app that uses AWS Rekognition for image analysis, Google Maps API for reverse geolocation, and an automated hashtag generator. Deployed using AWS ECR, ECS, and S3.</li>
-        <li><strong>Telegram Companion Bot</strong> – Python bot that receives photo uploads via Telegram and pushes them directly to S3, feeding into the automated photo publishing pipeline.</li>
+        <li>
+          <p class="project-meta">Public speaking &middot; <a href="https://lnkd.in/dv6NJudJ" target="_blank" rel="noopener" title="Event announcement">AWS User Group Berlin</a></p>
+          <h4><a href="https://github.com/hubacekjirka/ug-berlin-redshift-data-sharing" target="_blank" rel="noopener" title="Presentation on GitHub">Redshift Data Sharing: Solving Workload Contention at Scale</a></h4>
+          <p>A talk on using Amazon Redshift data sharing to isolate competing workloads without duplicating data. Covered predictable performance, resilience, cost control, and practical lessons from operating shared-data architectures.</p>
+        </li>
+        <li>
+          <p class="project-meta">Public speaking &middot; <a href="https://aws-experience.com/emea/de-central-growth/e/2973c/aws-analytics-day-redshift-focus" target="_blank" rel="noopener" title="Event description">AWS Analytics Day (Redshift focus)</a> &middot; Munich</p>
+          <h4>Redshift Serverless in Production</h4>
+          <p>Presented the production adoption of Amazon Redshift Serverless when it was newly available. The talk covered breaking down a monolithic cluster into isolated departmental workloads to establish a predictable performance baseline for each department.</p>
+        </li>
+        <li>
+          <p class="project-meta">Personal project</p>
+          <h4>Automated Photo Publishing App</h4>
+          <p>A photo sharing application posting daily to my Bluesky account. It's a Python app that uses AWS Rekognition for image analysis, Google Maps API for reverse geolocation, and an automated hashtag generator. Deployed using AWS ECR, ECS, and S3.</p>
+        </li>
+        <li>
+          <p class="project-meta">Personal project</p>
+          <h4>Telegram Companion Bot</h4>
+          <p>Python bot that receives photo uploads via Telegram and pushes them directly to S3, feeding into the automated photo publishing pipeline.</p>
+        </li>
       </ul>
     </section>
 

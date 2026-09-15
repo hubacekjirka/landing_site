@@ -1,1 +1,3 @@
-Joined in 2026 and still figuring it out 🎉🎉🎉
+At Revolut, I build self-service capabilities that help users work independently with the data platform. This includes automating pipeline onboarding and reducing manual work for the ETL team.
+
+Alongside that, I improve the performance and reliability of our multi-region platform. My work tuning Kubernetes and Airflow has helped cut data lead times in half, while strengthening resilience and observability. I also improve the developer experience through clearer documentation and practical checklists, covering the path from workspace setup to deployment and production verification.

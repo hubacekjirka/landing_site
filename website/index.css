@@ -195,6 +195,7 @@ section h3::after {
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow: hidden;
 }
 
 .hero::before {
@@ -247,6 +248,42 @@ section h3::after {
 .hero-content .cta:focus-visible {
   background-color: var(--color-primary-dark);
   transform: translateY(-2px);
+}
+
+.scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(1rem, 4vh, 2.25rem);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(1, 159, 181, 0.24);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.86);
+  color: #1b4965;
+  box-shadow: 0 10px 24px rgba(15, 52, 96, 0.12);
+  transform: translateX(-50%);
+  animation: scroll-cue-bob 1.8s ease-in-out infinite;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.scroll-cue::before {
+  content: '';
+  width: 0.8rem;
+  height: 0.8rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-0.15rem) rotate(45deg);
+}
+
+.scroll-cue:hover,
+.scroll-cue:focus-visible {
+  background: #ffffff;
+  color: var(--color-primary-dark);
+  box-shadow: 0 12px 30px rgba(15, 52, 96, 0.18);
 }
 
 .about,
@@ -350,8 +387,8 @@ section h3::after {
 }
 
 .projects li {
-  margin-bottom: 1.2rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid rgba(1, 159, 181, 0.12);
 }
 
@@ -361,9 +398,38 @@ section h3::after {
   margin-bottom: 0;
 }
 
-.projects strong {
+.projects h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem;
   color: #1b4965;
   font-weight: 600;
+}
+
+.projects p {
+  margin: 0;
+}
+
+.projects .project-meta {
+  margin-bottom: 0.35rem;
+  color: var(--color-primary-dark);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.projects a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(1, 125, 143, 0.35);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.projects a:hover,
+.projects a:focus-visible {
+  color: var(--color-primary-dark);
+  text-decoration-color: currentColor;
 }
 
 .education .degree {
@@ -590,6 +656,22 @@ body.is-portal-open {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes scroll-cue-bob {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 0.45rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue {
+    animation: none;
   }
 }
 footer {
