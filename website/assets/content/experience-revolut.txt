@@ -1,1 +1,5 @@
-Joined in 2026 and still figuring it out 🎉🎉🎉
+Building tools for platform users to self-service their data needs at global scale. Automating pipeline onboarding and removing manual work from the ETL team.
+
+Tuning Kubernetes and Airflow performance, cutting data lead times in half. Improving resilience and observability across a multi-region platform.
+
+Raising engineering standards through better developer documentation and checklist-based processes, covering everything from setting up a workspace and deploying changes to verifying that things work as expected in production.
